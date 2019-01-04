@@ -1,0 +1,65 @@
+
+.home_bgcimg{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+.heard_img{
+width: 300rpx;
+height: 300rpx;
+margin:  16% 25% 4% 30%;
+position: relative;
+}
+.close_img{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 107rpx;
+  right: 208rpx;
+}
+.take_img_btn{
+  color: #fff;
+  font-size: 42rpx;
+  text-align: center;
+  padding-bottom: 20rpx;
+}
+
+.content_box{
+  padding:0 100rpx;
+}
+.input_box{
+  padding: 20rpx;
+  background: #fff;
+  opacity: 0.5;
+  text-align: center;
+}
+.gender_box{
+  display: flex;
+  justify-content: space-between;
+}
+.gender{
+  color: #333;
+  padding: 20rpx 39rpx;
+  display: inline-block;
+  margin:40rpx 0 80rpx 0;
+  border-radius: 10rpx;
+}
+.girl{
+  background: #ffcc66;
+}
+.boy{
+  background: #9999ff;
+}
+.active{
+  color: #fff;
+  border:1px solid #ff9999;
+  background: #ff9999;
+}
+.take_btn{
+  text-align:center;
+  color:#fff;
+  padding:10rpx 0;
+  background: #33cccc;
+  border-radius: 10rpx;
+}

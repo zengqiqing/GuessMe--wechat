@@ -1,0 +1,142 @@
+
+.right_icon{
+    width: 15rpx;
+    height: 15rpx;
+    margin-top: 17rpx;
+    border-top: 2rpx solid #333;
+    border-right: 2rpx solid #333;
+    transform:rotate(45deg);
+    color: #D2D2D2;
+}
+.top_box{
+  position: relative;
+}
+.head_img{
+  width: 100%;
+  height: 600rpx;
+}
+.pcikCode{
+  position: absolute;
+  z-index: 1;
+  bottom: -84rpx;
+  right: 20rpx;
+  width: 200rpx;
+  height: 200rpx;
+}
+.content_box{
+  padding:  0 30rpx;
+  background: #fff;
+}
+.content_one{
+  margin-bottom: 20rpx;
+  text-align: left;
+}
+.price_box{
+  padding:10rpx 0;
+  font-weight: 600;
+  font-size: 32rpx;
+}
+.subtitle{
+  font-size: 30rpx;
+  color: #999;
+  display: inline-block;
+  width: 84%;
+  vertical-align: middle;
+}
+.share_box{
+  display: inline-block;
+  font-size: 24rpx;
+  width: 100%;
+  padding: 0;
+  /* line-height: 44rpx; */
+  height: 100%;
+}
+button::after{
+  border:none;
+}
+.share_icon{
+  width: 37rpx;
+  height: 37rpx;
+  vertical-align: middle;
+}
+.shipType_box{
+  padding:  20rpx 0;
+  font-size: 24rpx;
+  color: #999;
+}
+.sub_name{
+  font-size: 28rpx;
+  color: #999;
+  padding-right: 17rpx;
+}
+.sub_content{
+  font-size: 27rpx;
+  color: orange;
+}
+.sub_contentnone{
+   font-size: 28rpx;
+    color: #999;
+}
+.terms{
+  padding: 20rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bottom_tab{
+  line-height: 57rpx;
+  border-top: 1px solid #eaeaea;
+  padding:4rpx 0; 
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  /* position: absolute;
+  bottom: 0; */
+  width: 100%;
+  z-index: -1;
+}
+.icon_box{
+  font-size: 28rpx;
+  display: inline-block;
+  text-align: center;
+  padding-left: 20rpx;
+}
+.bottom_icon{
+  width: 50rpx;
+  height:50rpx; 
+}
+.bottom_word{
+  font-size: 24rpx;
+  color: #333;
+}
+.tocart_box{
+  display:inline-block;
+  color: #fff;
+  background: #ccc;
+  font-size: 30rpx;
+  padding: 15rpx 50rpx;
+}
+.cart_one{
+  border-top-left-radius: 30rpx;
+  border-bottom-left-radius: 30rpx;
+ background:linear-gradient(to bottom right, rgb(236, 187, 52) , rgb(226, 150, 35));
+}
+.cart_two{
+  border-top-right-radius: 30rpx;
+  border-bottom-right-radius: 30rpx;
+  background:linear-gradient(to bottom right, rgb(240, 146, 38) , rgb(221, 125, 15));
+}
+
+.mask{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: #999;
+  opacity: 0.6;
+}
+.code_box{
+  position: absolute;
+  top: 10rpx;
+  width: 100%;
+}

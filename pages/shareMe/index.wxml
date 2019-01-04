@@ -1,0 +1,58 @@
+
+<view class='top_box' bindtap='keepCanvas'>
+  <image class='head_img' src='{{item.tempFilePaths}}'  mode="aspectFill" ></image>
+    <image wx:if="{{!showCanvas}}" class='pcikCode' src='{{pickCode}}'></image>
+
+  <view wx:if="{{showCanvas}}" class='mask' style='height:{shareHeight}}px'></view>
+  <view wx:if="{{showCanvas}}" class='code_box' bindtap='closeCanvas'>
+    <shareCode serData="{{serData}}"  wx:if="{{showCanvas}}" btnData="{{btnData}}" percent="{{percent}}" pickCode="{{pickCode}}" price="{{price}}" customerName="{{item.customerName}}" item="{{item}}" tempFilePaths="{{item.tempFilePaths}}" customerGender="{{item.customerGender}}" showCanvas="{{showCanvas}}" bindDrawCanvas="makeCanvas"/>
+  </view>
+</view>
+
+<button wx:if="{{!showCanvas}}" class='share_box'hover-class="none" open-type="share" >
+<view class='content_box content_one'>
+  <!-- 价钱 -->
+  <view class='price_box'>
+    <view style='color:red'>￥{{price}}</view>
+    <view style='color:#333'>{{item.customerName}}</view>
+  </view>
+  <!-- subtitle -->
+      <view class='subtitle'>您的售价已经打败了全国<text>{{percent}}%</text>的<text>{{item.customerGender==0?"美女":"帅哥"}}</text>,新一代的偶像派诞生了！</view>
+      <image class='share_icon' src='/images/shareicon.png'></image><text decode="{{true}}" space="{{true}}">&nbsp;分享</text>
+
+  <!-- 快递运费 -->
+  <view class='shipType_box'>
+    <text decode="{{true}}" space="{{true}}">快递&nbsp;</text><text decode="{{true}}" space="{{true}}">运费:10RMB&nbsp;</text>
+    <text>月销78689</text>
+  </view>
+</view>
+
+<!-- 条款 -->
+<view class='content_box' wx:for="{{serveData}}" wx:for-item="serData" wx:key="key">
+  <view class='terms'>
+      <view>
+      <text class='sub_name'>{{serData.name}}</text><text class='{{serData.style?"sub_content":"sub_contentnone"}}'>{{serData.content}}</text>
+    </view>
+    <view style='display:flex'>
+      <view class='sub_name'>{{serData.work}}</view>
+      <view class='right_icon'></view>
+    </view>
+  </view>
+  </view>
+
+
+<!-- 底部栏 -->
+
+<view class='bottom_tab'>
+<view>
+   <view class='icon_box' wx:for="{{bottomData}}" wx:for-item="btnData" wx:key="index">
+      <image class='bottom_icon' src='{{btnData.btn_icon}}'></image>
+      <view>{{btnData.title}}</view>    
+  </view>
+</view>
+<view style='padding:10rpx 10rpx 0 0'>
+  <view class='tocart_box cart_one'>加入购物车</view>
+  <view class='tocart_box cart_two'>立即购买</view>
+</view>
+</view>
+</button>

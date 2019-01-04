@@ -1,0 +1,29 @@
+<image class='home_bgcimg'src='/images/home_one.jpg'></image>
+
+<form  bindsubmit="bindTakeForm">
+<!-- 拍照上传图片 -->
+  <image class='heard_img' bindtap="onChangeImage" src='{{tempFilePaths.length?tempFilePaths:"/images/addimg.png"}}'></image>
+  <image class='close_img' bindtap='closeHeader' wx:if="{{tempFilePaths.length}}" src='/images/close.png'></image>
+  <view class='take_img_btn'>拍照/上传图片</view>
+
+<!-- 内容盒子 -->
+<view class='content_box'>
+<!-- 输入昵称 -->
+<input class='input_box' bindinput="onInput" value="{{customerName}}" placeholder='请输入您的昵称'></input>
+<!-- 性别 -->
+<view class='gender_box'>
+  <view class='gender {{customerGender==0?"active":"girl"}}' bindtap='genderChoose' data-gender="0">我是美女</view>
+  <view class='gender {{customerGender==1?"active":"boy"}}' bindtap='genderChoose' data-gender="1">我是帅哥</view>
+</view>
+<!-- 提交按钮 -->
+<button formType="submit" class='take_btn'>卖多少钱</button>
+</view>
+</form>
+
+<action-sheet hidden="{{actionSheetShow}}" bindchange="actionSheetChange">
+  <block wx:for="{{actionSheetItems}}" wx:key="{{index}}">
+    <action-sheet-item class="item" bindtap="upLoadPhoto" data-name="{{item}}">{{item}}</action-sheet-item>
+  </block>
+  <action-sheet-cancel class="cancel" bindtap="closePhotoPop">取消</action-sheet-cancel>
+</action-sheet>
+
